@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav1"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="ae.ayeaye.guavapay.ui.first.MainFragment"
+        android:label="MainFragment" >
+        <action
+            android:id="@+id/openMinMax"
+            app:destination="@id/secondFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/secondFragment"
+        android:name="ae.ayeaye.guavapay.ui.second.MinMaxFragment"
+        android:label="fragment_second">
+        <action
+            android:id="@+id/openHistory"
+            app:destination="@id/thirdFragment" />
+        <argument
+            android:name="currencyCode"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/thirdFragment"
+        android:name="ae.ayeaye.guavapay.ui.third.PriceHistoryFragment"
+        android:label="fragment_third2">
+        <argument
+            android:name="currencyCode"
+            app:argType="string" />
+    </fragment>
+</navigation>
